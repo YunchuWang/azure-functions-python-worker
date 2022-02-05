@@ -1,21 +1,21 @@
-codecov:
-  branch: wangbill/pr-comment-codecov # set new Default branch
+comment:
+  layout: "reach, diff, flags, files"
+  behavior: default
+  require_changes: false
+  require_base: no
+  require_head: yes
 
 coverage:
+  range: "70..100"
+  round: down
+  precision: 2
   status:
     project:
       default:
-        target: 70%
-
-# flags:
-#   unittests:
-#     carryforward: false
-#     paths:
-#       - ./azure_functions_worker
-
-comment:                  # this is a top-level key
-  layout: "reach, diff, flags, files"
-  behavior: default
-  require_changes: false  # if true: only post the comment if coverage changes
-  require_base: no        # [yes :: must have a base report to post]
-  require_head: no       # [yes :: must have a head report to post]
+        # basic
+        target: 10%
+        threshold: 0%
+        # advanced settings
+        if_ci_failed: error
+        informational: false
+        only_pulls: false
