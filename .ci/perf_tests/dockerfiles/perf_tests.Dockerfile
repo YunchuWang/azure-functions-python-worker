@@ -12,7 +12,8 @@ ENV AzureWebJobsScriptRoot=/home/site/wwwroot \
     AzureFunctionsJobHost__Logging__Console__IsEnabled=true \
     FUNCTIONS_WORKER_PROCESS_COUNT=1 \
     AZURE_FUNCTIONS_ENVIRONMENT=Development \
-    FUNCTIONS_WORKER_SHARED_MEMORY_DATA_TRANSFER_ENABLED=1
+    FUNCTIONS_WORKER_SHARED_MEMORY_DATA_TRANSFER_ENABLED=1 \
+    AzureWebJobsStorage=DefaultEndpointsProtocol=https;AccountName=azpyfuncperfstorage;AccountKey=9gI1UuMc9cG9B2n39tdHjMtcUVzj6PuMZ3L0k/D2AFBlIA2QnrbczH4NXinebnId/Wdey1N9XyrG+AStP+v9RA==;EndpointSuffix=core.windows.net
 
 RUN apt-get --quiet update && \
     apt-get install --quiet -y git && \
