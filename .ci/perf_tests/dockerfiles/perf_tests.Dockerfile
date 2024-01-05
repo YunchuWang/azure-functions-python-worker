@@ -18,7 +18,7 @@ ENV AzureWebJobsScriptRoot=/home/site/wwwroot \
 RUN apt-get --quiet update && \
     apt-get install --quiet -y git && \
     cd /home && \
-    git clone https://github.com/vrdmr/AzFunctionsPythonPerformance.git && \
+    git clone https://github.com/YunchuWang/AzFunctionsPythonPerformance.git && \
     mkdir -p /home/site/wwwroot/ && \
     cp -r AzFunctionsPythonPerformance/* /home/site/wwwroot/ && \
     pip install -q -r /home/site/wwwroot/requirements.txt
